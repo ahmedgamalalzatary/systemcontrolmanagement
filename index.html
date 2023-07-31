@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Website Control</title>
+    <!--=============== FAVICON ===============-->
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!--=============== googel fonts ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Crud</h2>
+            <p>product management system</p>
+
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price"></input>
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes"></input>
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads"></input>
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount"></input>
+            </div>
+            <div id="total"></div>
+            <input type="number" id="count" placeholder="count"></input>
+            <input type="text" id="category" placeholder="category"></input>
+            <button id="submit" class="button ">Create item</button>
+        </div>
+        <hr>
+        <div class="outputs">
+            <div class="search">
+                <input type="search" onkeyup="searchdata(this.value)" id="search" placeholder="Search">
+                <div class="btnsearch">
+                    <button onclick="getSearch(this.id)" id="search__title" class=" search button">Search By Title</button>
+                    <button onclick="getSearch(this.id)" id="search__category" class="search button">Search By category</button>
+                    <button onclick="getSearch(this.id)" id="search__price" class="search button">Search By Price</button>
+                    <button onclick="getSearch(this.id)" id="search__discount" class="search button">Search By discount</button>
+                    <button onclick="getSearch(this.id)" id="search__taxes" class="search button">Search By Taxes</button>
+                    <button onclick="getSearch(this.id)" id="search__total" class="search button">Search By Total</button>
+
+
+                </div>
+            </div>
+            <div id="deleteall"></div>
+            <table>
+                
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>category</th>
+                        <th>total</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script src="script1.js"></script>
+</body>
+
+</html>
